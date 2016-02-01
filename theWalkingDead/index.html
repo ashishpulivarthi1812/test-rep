@@ -1,0 +1,507 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        * file name: index.html
+        * author's name: Roy Kim
+        * last modified by: Roy Kim
+        * date last modified: May 29, 2015
+        * program description: the WalkingDead scenario and step-by-step explanation.
+        * revision history: _v4
+    -->
+    
+    <meta charset="utf-8" />
+    <title>The WalkingDead</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+  
+    <script>
+        /* showing appropriate image based on user's choice*/
+        function showSelectedWeapon(selectedWeapon) {
+            var img = document.getElementById("imgWeapon");
+
+            if (selectedWeapon == "gun") {
+                img.src = "images/gun.jpg";
+                img.style.display = "block";
+            } else if (selectedWeapon == "bowgun") {
+                img.src = "images/bowgun.jpg";
+                img.style.display = "block";
+            } else if (selectedWeapon == "sword") {
+                img.src = "images/sword.jpg";
+                img.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="impress">
+        <!-- main slide begin -->
+        <div id="intro" class="step slide">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p>World is changed. The world was safe and we were secure in our comforting routine existence, but next these were all gone. Zombies are everywhere and they are hunting people.</p>
+                <p>You are the leader of a survived group. People believe that you will lead them to survive and eventually to find a safe place. Your arduous journey is just begun.</p>
+
+                <p>Which weapon would you like to have?(Optional)</p>
+                <p>
+                    <input type="radio" name="weapon" value="gun" onclick="showSelectedWeapon(this.value)" />Gun
+                    <input type="radio" name="weapon" value="bowgun" onclick="showSelectedWeapon(this.value)" />Bow Gun
+                    <input type="radio" name="weapon" value="sword" onclick="showSelectedWeapon(this.value)" />Sword
+                </p>
+
+                <img id="imgWeapon" class="imgWeapon" style="position:absolute;top:360px;left:520px;height:160px;display:none" />
+                <br />
+                <p>Which way do you want to go?</p>
+                <p>
+                    <a href="#forest">
+                        <div id="btn1" class="btn">
+                            <div class="one">Forest</div>
+                            <div class="two">Forest</div>
+                            <div class="three">Forest</div>
+                            <div class="four">Forest</div>
+                            <div class="five">Forest</div>
+                            <div class="six">Forest</div>
+                        </div>
+                    </a>
+
+                    <a href="#road">
+                        <div id="btn2" class="btn">
+                            <div class="one">Road</div>
+                            <div class="two">Road</div>
+                            <div class="three">Road</div>
+                            <div class="four">Road</div>
+                            <div class="five">Road</div>
+                            <div class="six">Road</div>
+                        </div>
+                    </a>
+
+                    <a href="#railway">
+                        <div id="btn3" class="btn">
+                            <div class="one">Rail<br />way</div>
+                            <div class="two">Rail<br />way</div>
+                            <div class="three">Rail<br />way</div>
+                            <div class="four">Rail<br />way</div>
+                            <div class="five">Rail<br />way</div>
+                            <div class="six">Rail<br />way</div>
+                        </div>
+                    </a>
+                </p>
+
+            </div>
+        </div>
+        <!-- main slide end -->
+
+        <!-- 2nd level slides begin-->
+        <!-- slide for forest -->
+        <div id="forest" class="step slide" data-y="1500" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p>You and your group enter the forest and you decide to walk along a stream to get some water. It seems that the stream runs from north to south.</p>
+                <!--<p>It seems that the stream runs from north to south.</p>-->
+                <img src="images/forest.jpg" class="slideImg" />
+
+                <p>Which direction do you want to go?</p>
+                <p>
+                    <a href="#north">
+                        <div id="btn1" class="btn">
+                            <div class="one">North</div>
+                            <div class="two">North</div>
+                            <div class="three">North</div>
+                            <div class="four">North</div>
+                            <div class="five">North</div>
+                            <div class="six">North</div>
+                        </div>
+                    </a>
+
+                    <a href="#south">
+                        <div id="btn2" class="btn">
+                            <div class="one">South</div>
+                            <div class="two">South</div>
+                            <div class="three">South</div>
+                            <div class="four">South</div>
+                            <div class="five">South</div>
+                            <div class="six">South</div>
+                        </div>
+                    </a>
+                </p>
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+
+        <!-- slide for road -->
+        <div id="road" class="step slide" data-x="1500" data-y="1500" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+
+                <div style="width:400px">
+                    <p>You and your group enter the road. You can see far ahead cleary now, and, furthermore, it's better to move faster. However, your group could be detected by zombies easily as long as you stay on the road.</p>
+                    <p>It seems that this road connects up two cities from north-west to south-east.</p>
+                </div>
+                <img src="images/road.jpg" style="width:300px;position:absolute;left:470px;top:120px;" />
+
+                <p>Which direction do you want to go?</p>
+                <p>
+                    <a href="#nw">
+                        <div id="btn1" class="btn">
+                            <div class="one">North<br />West</div>
+                            <div class="two">North<br />West</div>
+                            <div class="three">North<br />West</div>
+                            <div class="four">North<br />West</div>
+                            <div class="five">North<br />West</div>
+                            <div class="six">North<br />West</div>
+                        </div>
+                    </a>
+
+                    <a href="#se">
+                        <div id="btn2" class="btn">
+                            <div class="one">South<br />East</div>
+                            <div class="two">South<br />East</div>
+                            <div class="three">South<br />East</div>
+                            <div class="four">South<br />East</div>
+                            <div class="five">South<br />East</div>
+                            <div class="six">South<br />East</div>
+                        </div>
+                    </a>
+                </p>
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+
+        <!-- slide for railway -->
+        <div id="railway" class="step slide" data-x="-1500" data-y="1500" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p>You and your group enter the railway. You can now simply feagure out your location based on rail map. </p>
+                <p>The railway extends 22 miles from west to east.</p>
+                <img src="images/railroad.jpg" class="slideImg" />
+                <p>Which direction do you want to go?</p>
+                <p>
+                    <a href="#west">
+                        <div id="btn1" class="btn">
+                            <div class="one">West</div>
+                            <div class="two">West</div>
+                            <div class="three">West</div>
+                            <div class="four">West</div>
+                            <div class="five">West</div>
+                            <div class="six">West</div>
+                        </div>
+                    </a>
+
+                    <a href="#east">
+                        <div id="btn2" class="btn">
+                            <div class="one">East</div>
+                            <div class="two">East</div>
+                            <div class="three">East</div>
+                            <div class="four">East</div>
+                            <div class="five">East</div>
+                            <div class="six">East</div>
+                        </div>
+                    </a>
+                </p>
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+        <!-- 2nd level slides end-->
+
+        <!-- 3nd level slides begin-->
+        <!-- [3-1] slides for forest begin-->
+        <!-- slide for north of forest -->
+        <div id="north" class="step slide" data-y="1500" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p><div class="emphasis">Zombies!!!</div><br /> You and your group confront number of zombies. </p>
+                <img src="images/zombie_on_road.jpg" class="slideImg" />
+                <p>Will you fight aginst the zombies? or run away? </p>
+                <p>
+                    <a href="#fight">
+                        <div id="btn1" class="btn">
+                            <div class="one">Fight</div>
+                            <div class="two">Fight</div>
+                            <div class="three">Fight</div>
+                            <div class="four">Fight</div>
+                            <div class="five">Fight</div>
+                            <div class="six">Fight</div>
+                        </div>
+                    </a>
+
+                    <a href="#run">
+                        <div id="btn2" class="btn">
+                            <div class="one">Run<br />away</div>
+                            <div class="two">Run<br />away</div>
+                            <div class="three">Run<br />away</div>
+                            <div class="four">Run<br />away</div>
+                            <div class="five">Run<br />away</div>
+                            <div class="six">Run<br />away</div>
+                        </div>
+                    </a>
+                </p>
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+
+        <!-- slide for south of forest -->
+        <div id="south" class="step slide" data-y="-1500" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p>A stranger approches to you and ask you to join his community.  </p>
+                <img src="images/suggestion.jpg" class="slideImg" />
+
+                <p>Would you accept his suggestion?</p>
+                <p>
+                    <a href="#accept">
+                        <div id="btn1" class="btn">
+                            <div class="one">Acc-<br />ept</div>
+                            <div class="two">Acc-<br />ept</div>
+                            <div class="three">Acc-<br />ept</div>
+                            <div class="four">Acc-<br />ept</div>
+                            <div class="five">Acc-<br />ept</div>
+                            <div class="six">Acc-<br />ept</div>
+                        </div>
+                    </a>
+
+                    <a href="#refuse">
+                        <div id="btn2" class="btn">
+                            <div class="one">Re-<br />fuse</div>
+                            <div class="two">Re-<br />fuse</div>
+                            <div class="three">Re-<br />fuse</div>
+                            <div class="four">Re-<br />fuse</div>
+                            <div class="five">Re-<br />fuse</div>
+                            <div class="six">Re-<br />fuse</div>
+                        </div>
+                    </a>
+                </p>
+            </div>
+            <div class="menu">
+                <a href="#forest">GO ONE STEP BACK</a>
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+        <!-- [3-1] slides for forest end-->
+
+        <!-- [3-2] slides for road begin-->
+        <!-- slide for north-west of road -->
+        <div id="nw" class="step slide" data-x="-1500" data-y="1500" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p><div class="emphasis">Zombies!!!</div><br /> You and your group confront lots of zombies. </p>
+                <img src="images/zombie_warehouse.jpg" class="slideImg" />
+                <p>Will you fight aginst the zombies? or run away? </p>
+                <p>
+                    <a href="#fight">
+                        <div id="btn1" class="btn">
+                            <div class="one">Fight</div>
+                            <div class="two">Fight</div>
+                            <div class="three">Fight</div>
+                            <div class="four">Fight</div>
+                            <div class="five">Fight</div>
+                            <div class="six">Fight</div>
+                        </div>
+                    </a>
+
+                    <a href="#run">
+                        <div id="btn2" class="btn">
+                            <div class="one">Run<br />away</div>
+                            <div class="two">Run<br />away</div>
+                            <div class="three">Run<br />away</div>
+                            <div class="four">Run<br />away</div>
+                            <div class="five">Run<br />away</div>
+                            <div class="six">Run<br />away</div>
+                        </div>
+                    </a>
+                </p>
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+
+        <!-- slide for south-east of road -->
+        <div id="se" class="step slide" data-x="1500" data-y="-1500" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p><div class="emphasis">Zombies!!!</div><br /> You and your group confront lots of zombies. </p>
+                <img src="images/zombie_confront.jpg" class="slideImg" />
+                
+                <p>Will you fight aginst the zombies? or run away? </p>
+                <p>
+                    <a href="#fight">
+                        <div id="btn1" class="btn">
+                            <div class="one">Fight</div>
+                            <div class="two">Fight</div>
+                            <div class="three">Fight</div>
+                            <div class="four">Fight</div>
+                            <div class="five">Fight</div>
+                            <div class="six">Fight</div>
+                        </div>
+                    </a>
+
+                    <a href="#run">
+                        <div id="btn2" class="btn">
+                            <div class="one">Run<br />away</div>
+                            <div class="two">Run<br />away</div>
+                            <div class="three">Run<br />away</div>
+                            <div class="four">Run<br />away</div>
+                            <div class="five">Run<br />away</div>
+                            <div class="six">Run<br />away</div>
+                        </div>
+                    </a>
+                </p>
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+        <!-- [3-2] slides for road end-->
+
+        <!-- [3-3] slides for railway begin-->
+        <!-- slide for west of railway -->
+        <div id="west" class="step slide" data-x="-1500" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p><div class="emphasis">Zombies!!!</div><br /> You and your group confront lots of zombies. </p>
+                <img src="images/zombie_railroad.jpg" class="slideImg" />
+
+                <p>Will you fight aginst the zombies? or run away? </p>
+                <p>
+                    <a href="#fight">
+                        <div id="btn1" class="btn">
+                            <div class="one">Fight</div>
+                            <div class="two">Fight</div>
+                            <div class="three">Fight</div>
+                            <div class="four">Fight</div>
+                            <div class="five">Fight</div>
+                            <div class="six">Fight</div>
+                        </div>
+                    </a>
+
+                    <a href="#run">
+                        <div id="btn2" class="btn">
+                            <div class="one">Run<br />away</div>
+                            <div class="two">Run<br />away</div>
+                            <div class="three">Run<br />away</div>
+                            <div class="four">Run<br />away</div>
+                            <div class="five">Run<br />away</div>
+                            <div class="six">Run<br />away</div>
+                        </div>
+                    </a>
+                </p>
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+
+        <!-- slide for east of railway -->
+        <div id="east" class="step slide" data-x="1500" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p><div class="emphasis">Zombies!!!</div><br /> Your group members are being chased by lots of zombies. </p>
+                <img src="images/railroad_run.jpg" class="slideImg" />
+
+                <p>Will you fight aginst the zombies to help them out? or run away? </p>
+                <p>
+                    <a href="#fight">
+                        <div id="btn1" class="btn">
+                            <div class="one">Fight</div>
+                            <div class="two">Fight</div>
+                            <div class="three">Fight</div>
+                            <div class="four">Fight</div>
+                            <div class="five">Fight</div>
+                            <div class="six">Fight</div>
+                        </div>
+                    </a>
+
+                    <a href="#run">
+                        <div id="btn2" class="btn">
+                            <div class="one">Run<br />away</div>
+                            <div class="two">Run<br />away</div>
+                            <div class="three">Run<br />away</div>
+                            <div class="four">Run<br />away</div>
+                            <div class="five">Run<br />away</div>
+                            <div class="six">Run<br />away</div>
+                        </div>
+                    </a>
+                </p>
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+        <!-- [3-3] slides for railway end-->
+        <!-- 3nd level slides end-->
+
+        <!-- 4nd level slides begin-->
+        <!-- slide for result of fight -->
+        <div id="fight" class="step slide" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p><div class="emphasis">You will die..</div><br /> Although all of your group fought well, but it was not enough to defeat all of the endless zombies. </p>
+                <img src="images/dead_after_fight.jpg" class="slideImg" />
+
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+
+        <!-- slide for result of runaway -->
+        <div id="run" class="step slide" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p><div class="emphasis">You will die..</div><br /> Although all of your group run away from the zombies, but you are stuck. </p>
+                <img src="images/dead_rock.jpg" class="slideImg" />
+
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+
+        <!-- slide for result of accept -->
+        <div id="accept" class="step slide" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p><div class="emphasis">You will die..</div><br /> He cheated you. His group is going to take away your food as well as weapons after kill you.  </p>
+                <img src="images/cheat.png" class="slideImg" />
+
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+
+        <!-- slide for result of refuse -->
+        <div id="refuse" class="step slide" data-z="1500">
+            <div class="slide-text">
+                <p class="title">The Walking Dead</p>
+                <p>You refuse his suggestion because you can't trust anyone to protect your group. </p>
+                <!--<img src="images/refuse_suggestion.jpg" class="slideImg" />-->
+                <p>
+                    And then..your group continue walking.. just walk and walk.
+                    Finally, your group could find a safe place!!!
+                </p>
+                <img src="images/happyend.jpg" class="slideImg" />
+            </div>
+            <div class="menu">
+                <a href="#intro">START OVER</a>
+            </div>
+        </div>
+        <!-- 4nd level slides end-->
+
+    </div>
+
+
+        <!-- JavaScript Section -->
+        <script src="js/impress.js"></script>
+        <script>impress().init();</script>
+
+</body>
+</html>
